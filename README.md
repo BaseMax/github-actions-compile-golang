@@ -20,9 +20,9 @@ Create a new file in the `.github/workflows` directory:
 
 - File name: `c-compile.yml`
 - Action Setup: The action is defined in the `c-compile.yml` file, which runs the following steps:
-  - Checkout code using the actions/checkout@v3 action.
-  - Install GCC using the apt-get package manager on Ubuntu.
-  - Compile the Go program using go build -o my_program main.go.
+  - Checkout code using the `actions/checkout@v3` action.
+  - Install Golang compiler using the apt-get package manager on Ubuntu.
+  - Compile the Go program using `go build -o my_program main.go`.
   - Run the compiled program and ensure that it works.
 
 ### 3. Example Go Program
@@ -56,7 +56,7 @@ func main() {
 Whenever you push to the main branch or create a pull request, the GitHub Action will automatically:
 
 - Check out the code.
-- Set up the GCC compiler.
+- Set up the Golang compiler.
 - Compile the program.
 - Run the program to verify that the compilation was successful.
 - You can view the results of the action under the Actions tab of the GitHub repository.
